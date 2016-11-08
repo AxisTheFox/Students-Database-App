@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Students"
         // Do any additional setup after loading the view, typically from a nib.
     }
 
