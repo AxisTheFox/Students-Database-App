@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var studentsTableView: UITableView!
     
     var studentTableData:NSArray = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         studentsTableView.delegate = self
@@ -47,7 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return studentTableData.count
+            return studentTableData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
