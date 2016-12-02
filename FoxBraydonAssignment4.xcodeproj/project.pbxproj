@@ -14,6 +14,8 @@
 		84F133B51DD1688A009DB858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F133B31DD1688A009DB858 /* LaunchScreen.storyboard */; };
 		84F133C01DD1688A009DB858 /* FoxBraydonAssignment4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F133BF1DD1688A009DB858 /* FoxBraydonAssignment4Tests.swift */; };
 		84F133CB1DD1688A009DB858 /* FoxBraydonAssignment4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F133CA1DD1688A009DB858 /* FoxBraydonAssignment4UITests.swift */; };
+		84F134131DF123DF009DB858 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F134121DF123DF009DB858 /* Student.swift */; };
+		84F134151DF12AE3009DB858 /* StudentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F134141DF12AE3009DB858 /* StudentDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		84F133C61DD1688A009DB858 /* FoxBraydonAssignment4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoxBraydonAssignment4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F133CA1DD1688A009DB858 /* FoxBraydonAssignment4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoxBraydonAssignment4UITests.swift; sourceTree = "<group>"; };
 		84F133CC1DD1688A009DB858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F134121DF123DF009DB858 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		84F134141DF12AE3009DB858 /* StudentDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				84F133AA1DD1688A009DB858 /* AppDelegate.swift */,
 				84F133AC1DD1688A009DB858 /* ViewController.swift */,
+				84F134121DF123DF009DB858 /* Student.swift */,
+				84F134141DF12AE3009DB858 /* StudentDetailsViewController.swift */,
 				84F133AE1DD1688A009DB858 /* Main.storyboard */,
 				84F133B11DD1688A009DB858 /* Assets.xcassets */,
 				84F133B31DD1688A009DB858 /* LaunchScreen.storyboard */,
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F133AD1DD1688A009DB858 /* ViewController.swift in Sources */,
+				84F134151DF12AE3009DB858 /* StudentDetailsViewController.swift in Sources */,
+				84F134131DF123DF009DB858 /* Student.swift in Sources */,
 				84F133AB1DD1688A009DB858 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +511,7 @@
 				84F133D11DD1688A009DB858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84F133D21DD1688A009DB858 /* Build configuration list for PBXNativeTarget "FoxBraydonAssignment4Tests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +520,7 @@
 				84F133D41DD1688A009DB858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84F133D51DD1688A009DB858 /* Build configuration list for PBXNativeTarget "FoxBraydonAssignment4UITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +529,7 @@
 				84F133D71DD1688A009DB858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

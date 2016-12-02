@@ -12,7 +12,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var studentsTableView: UITableView!
     
-    var studentTableData:NSArray = []
+    var studentResultsData:NSArray = []
+    var studentList = [Student]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             do {
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSArray {
                     DispatchQueue.main.async(execute: {
-                        self.studentTableData = jsonResult
+                        self.studentResultsData = jsonResult
                         self.studentsTableView.reloadData()
                     })
                 }
@@ -48,14 +49,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return studentTableData.count
+        return studentResultsData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier:"cell")
-        let rowData:NSDictionary = (self.studentTableData[indexPath.row] as? NSDictionary)!
-        cell.textLabel?.text = (rowData["FirstName"] as? String)! + " " + (rowData["LastName"] as? String)!
+        let rowData:NSDictionary = (self.studentResultsData[indexPath.row] as? NSDictionary)!
+        let s = Student()
+        s.id = (rowData["StudentId"] as? String)!
+        s.lastName = (rowData["LastName"] as? String)!
+        s.firstName = (rowData["FirstName"] as? String)!
+        s.major = (rowData["Major"] as? String)!
+        s.year = (rowData["Year"] as? String)!
+        s.gpa = (rowData["GPA"] as? String)!
+        studentList.append(s)
+        cell.textLabel?.text = s.firstName + " " + s.lastName
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showStudentDetails", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? StudentDetailsViewController
+        let index = ((sender as! IndexPath) as NSIndexPath).row
+        destination?.student = studentList[index]
     }
 
 }
